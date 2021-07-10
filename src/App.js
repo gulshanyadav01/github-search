@@ -11,7 +11,7 @@ import loadingGif from "./Asset/images/loading1.gif";
 import React from "react";
 
 // import Popular from "./components/Popular"
-const  App = () => {
+const  App = () => 
   const {isLoading} = React.useContext(GithubContext);
   if(isLoading){
     return(
