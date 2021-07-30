@@ -7,20 +7,6 @@ import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.candy'
 
 ReactFC.fcRoot(FusionCharts, Charts, FusionTheme);
 
-// const chartData = [
-//     {
-//         label:"HTML",
-//         value:"13",
-//     },
-//     {
-//         label:"CSS",
-//         value:"23",
-//     },
-//     {
-//         label:"JAVASCRIPT",
-//         value:"80"
-//     }
-// ];
 
 
 const Example = ({data}) => {
