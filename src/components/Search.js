@@ -14,8 +14,7 @@ const  Search = () =>{
 
     const onSubmit = (e) =>{
         e.preventDefault();
-        // console.log(user);
-        // more login coming soon
+        
         if(user){
             searchGithubUser(user);
             // setUser("");
