@@ -15,7 +15,7 @@ const GithubProvider = ({children}) =>{
     const [repos, setRepos] = useState(Repos);
     const [followers, setFollowers] = useState(Followers)
     
-    //request loading 
+    //request loading for 60 requests only in one hour 
     const [requests, setRequests]  = useState(0);
     const [isLoading, setIsLoading] = useState(false);
 
