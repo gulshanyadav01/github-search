@@ -1,20 +1,17 @@
-import React,{useContext} from 'react'
-import {GithubContext} from "../Context/Context";
-import {RiGitRepositoryLine} from "react-icons/ri"
+import React,{ useContext } from 'react'
+import { GithubContext } from "../Context/Context";
+import { RiGitRepositoryLine } from "react-icons/ri"
 
-import {GiShadowFollower} from "react-icons/gi"
-import {AiOutlineUsergroupAdd} from "react-icons/ai"
-import {BsFileEarmarkCode} from "react-icons/bs"
-// import Card from "./Card"
+import { GiShadowFollower } from "react-icons/gi"
+import { AiOutlineUsergroupAdd } from "react-icons/ai"
+import { BsFileEarmarkCode } from "react-icons/bs"
 
 
 const  User = () =>  {
-    const {githubuser} = useContext(GithubContext);
-    const {public_repos, followers, following, public_gists} = githubuser;
-    // make the array of 
-    // const items = [
-    //     {id:1, icons:}
-    // ]
+    const { githubuser } = useContext( GithubContext );
+
+    const { public_repos, followers, following, public_gists } = githubuser;
+    
 
     return (
         <div className = "lg:flex lg:flex-row sm:flex-col  ">

@@ -1,14 +1,15 @@
 import React from 'react'
-import {GithubContext} from "../Context/Context";
-import Followers from "./Followers"
-import {HiOutlineOfficeBuilding} from "react-icons/hi"
-import {ImLocation2} from "react-icons/im"
-import {AiOutlineLink} from "react-icons/ai"
+import { GithubContext } from "../Context/Context";
+import  Followers from "./Followers"
+import { HiOutlineOfficeBuilding } from "react-icons/hi"
+import { ImLocation2 } from "react-icons/im"
+import { AiOutlineLink } from "react-icons/ai"
 
 
 const Card =  ()  => {
     const {githubuser} = React.useContext(GithubContext);
     const {avatar_url, html_url, name, company,blog,} = githubuser;
+    
     return (
         <div className = "lg:flex lg:flex-row lg:w-full">
             <div className ="lg:w-1/2 sm:w-1 mt-8 mr-4 h-64  rounded" style = {{backgroundColor:"#182037"}} >
