@@ -7,7 +7,7 @@ import Bar from "./Charts/Bar";
 
 
 const  Repos  = () =>  {
-    const {repos } = React.useContext(GithubContext); 
+const {repos } = React.useContext( GithubContext ); 
  const  languages = repos.reduce((total, item) =>{
      const {language, stargazers_count } = item;
      if(!language) return total;
