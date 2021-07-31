@@ -7,23 +7,26 @@ import Bar from "./Charts/Bar";
 
 
 const  Repos  = () =>  {
-const {repos } = React.useContext( GithubContext ); 
- const  languages = repos.reduce((total, item) =>{
-     const {language, stargazers_count } = item;
-     if(!language) return total;
-     if(!total[language]){
-         total[language] = {
-             label: language, value:1,
-             stars: stargazers_count
-         }; 
-     }else{
-        total[language] = {...total[language], value:total[language].value + 1,
-        stars: total[language].stars + stargazers_count,
-    };
+
+    const {repos } = React.useContext( GithubContext ); 
+    const  languages = repos.reduce((total, item) =>{
+        const {language, stargazers_count } = item;
+        if(!language) return total;
+        if(!total[language]){
+            total[language] = {
+                label: language, value:1,
+                stars: stargazers_count
+            }; 
      }
-     return total;
+    else{
+            total[language] = {...total[language], value:total[language].value + 1,
+            stars: total[language].stars + stargazers_count,
+        };
+    }
+    return total;
      
  },{});
+ 
  
  const mostUsed  = Object.values(languages).sort((a, b) =>{
      return b.value - a.value
@@ -46,7 +49,7 @@ const {repos } = React.useContext( GithubContext );
     const {stargazers_count, name , forks} = item;
     total.stars[stargazers_count] = {label:name, value: stargazers_count};
     total.forks[forks] = {label:name, value:forks}
-    
+
     return total;
  },
  {
