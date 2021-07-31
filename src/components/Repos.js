@@ -1,7 +1,7 @@
 import React from 'react'
 import Pie from "./Charts/pie"
 import Column from "./Charts/Column"
-import {GithubContext} from "../Context/Context"; 
+import { GithubContext  } from "../Context/Context"; 
 import Doughnut from "./Charts/Doughnut" 
 import Bar from "./Charts/Bar";
 
@@ -42,9 +42,11 @@ const {repos } = React.useContext( GithubContext );
  // stars, forks 
 
  let {stars, forks } = repos.reduce((total, item) =>{
+
     const {stargazers_count, name , forks} = item;
     total.stars[stargazers_count] = {label:name, value: stargazers_count};
     total.forks[forks] = {label:name, value:forks}
+    
     return total;
  },
  {
@@ -54,22 +56,6 @@ const {repos } = React.useContext( GithubContext );
 
  stars = Object.values(stars).slice(-5).reverse();
  forks = Object.values(forks).slice(-5).reverse();
-
-
-//  const chartData = [
-//     {
-//         label:"HTML",
-//         value:"13",
-//     },
-//     {
-//         label:"CSS",
-//         value:"190",
-//     },
-//     {
-//         label:"JAVASCRIPT",
-//         value:"800"
-//     }
-// ];
 
     return (
         <div>
