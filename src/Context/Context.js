@@ -1,7 +1,11 @@
 import React,{ useState, useEffect } from 'react'
+
 import User from "./mockData/mockUser"
+
 import Repos from "./mockData/mockRepos"
+
 import Followers from "./mockData/mockFollowers"
+
 import axios from "axios";
 
 const rootUrl = "https://api.github.com";
@@ -11,12 +15,16 @@ const GithubContext = React.createContext()
 // Provider and consumer from GithubContext.Provider 
 
 const GithubProvider = ({children}) =>{
+
     const [githubuser, setGithubUser] = useState(User);
+
     const [repos, setRepos] = useState(Repos);
+
     const [followers, setFollowers] = useState(Followers)
     
     //request loading for 60 requests only in one hour 
     const [requests, setRequests]  = useState(0);
+
     const [isLoading, setIsLoading] = useState(false);
 
     const searchGithubUser = async(user) =>{
@@ -26,6 +34,7 @@ const GithubProvider = ({children}) =>{
             console.log(err);
         })
         if(response){
+
             setGithubUser(response.data);
             const {login, followers_url} = response.data;
             // repos
@@ -83,9 +92,10 @@ const GithubProvider = ({children}) =>{
 
     return(
         <GithubContext.Provider value = {{githubuser, repos, followers, requests, error,searchGithubUser, isLoading }}>
-            {children}
+            { children }
         </GithubContext.Provider>
     )
 }
+
 
 export  {GithubContext, GithubProvider}; 

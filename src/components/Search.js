@@ -3,9 +3,13 @@ import {AiOutlineSearch} from "react-icons/ai"
 import { GithubContext } from '../Context/Context';
 ;
 const  Search = () =>{
+
     const [user, setUser] = React.useState("");
+
     const {requests, error, searchGithubUser} = React.useContext(GithubContext);
+
     console.log(requests);
+    
     console.log(error.msg);
 
     const onChange = (e) =>{

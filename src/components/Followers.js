@@ -19,7 +19,7 @@ const Followers = ()  => {
 
                     <div className = "flex  hover:bg-black">
                         <div>
-                                <img src = {avatar_url} className = "w-12 m-4 h-12 ring-2 ring-red-400 rounded-full"  alt = "image"/>
+                                <img src = {avatar_url} className = "w-12 m-4 h-12 ring-4 ring-green-600 rounded-full"  alt = "image"/>
                         </div>
                         <div className = "m-4 font-extrabold " style ={{color:"#8D9AC4"}}>
                                 <h1  className = "text-blue-900 ">{login}</h1>

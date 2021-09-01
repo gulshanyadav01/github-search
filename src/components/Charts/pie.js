@@ -31,7 +31,7 @@ const Example = ({data}) => {
               "pieRadius":"45%",
               "subCaptionColor":"white"
             },
-            data:data
+            data: data
         }
       };
       

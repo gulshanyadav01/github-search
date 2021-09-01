@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {GithubProvider} from "./Context/Context"
+import { GithubProvider } from "./Context/Context"
+import Hello from "./Hello"; 
 
 ReactDOM.render(
   <React.StrictMode>

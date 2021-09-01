@@ -26,7 +26,7 @@ const Card =  ()  => {
 
                     <div className ="flex m-3">
 
-                        <img src = {avatar_url} alt = {name} className = "rounded-full w-24 h-24" />
+                        <img src = {avatar_url} alt = {name} className = "rounded-full w-24 h-24 ring-4 ring-green-600" />
 
                         <h1 className = "m-4" style ={{color:"#8D9AC4"}}>{name}</h1>
 
