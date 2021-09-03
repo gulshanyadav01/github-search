@@ -38,13 +38,13 @@ const GithubProvider = ({children}) =>{
             setGithubUser(response.data);
             const {login, followers_url} = response.data;
             // repos
-            axios.get(`${rootUrl}/users/${login}/repos?per_page = 100`).
-            then(response =>{
+            axios.get(`${rootUrl}/users/${login}/repos?per_page = 100`)
+            .then(response =>{
                 setRepos(response.data);
             })
             // followers 
-            axios.get(`${followers_url}?per_page=100`).
-            then(response =>{
+            axios.get(`${followers_url}?per_page=100`)
+            .then(response =>{
                 // console.log(response)
                 setFollowers(response.data)
             })

@@ -1,8 +1,8 @@
 // import Hello from "./Hello"
-import Followers from "./components/Followers"
+// import Followers from "./components/Followers"
 import Info from "./components/Info"
 import User from "./components/User"
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 import Repos from "./components/Repos"; 
 import Search from "./components/Search"
 import Navbar from "./components/Navbar"
