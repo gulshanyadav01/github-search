@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from "./Card"
-import Followers from "./Followers"
+// import Followers from "./Followers"
 
 const  Info = ()  => {
     return (
