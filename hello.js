@@ -1,12 +1,15 @@
-// // function cal(x, y, z){
+// closur 
 
-// //     return x+y+z; 
+const greet = (name) => {
 
-// // }
+    const welcome = () => {
 
-// const number = [1, 2, 3 ]; 
-// const numbers = [...number, 4]; 
-// numbers.sort((a, b) => b - a ); 
-// console.log(numbers)
+        console.log(`hello ${name}`); 
+    }
+     
+    return welcome; 
+}
 
-// // console.log(cal(...numbers)); 
+const app = greet("gulshan");
+
+app(); 
