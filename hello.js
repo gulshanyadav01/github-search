@@ -13,4 +13,5 @@ const greet = (name) => {
 const app = greet("gulshan");
 
 // callback has been setup
-app()
+// callback has been setup 
+app(); 

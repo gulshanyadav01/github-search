@@ -15,7 +15,7 @@ const Card =  ()  => {
 
     const {githubuser} = React.useContext(GithubContext);
 
-    const {avatar_url, html_url, name, company,blog,} = githubuser;
+    const {avatar_url, html_url, name, company,blog, location} = githubuser;
     
     return (
         <div className = "lg:flex lg:flex-row lg:w-full">
@@ -34,8 +34,8 @@ const Card =  ()  => {
                 </div>
                 <div style ={{color:"#8D9AC4"}} className = "m-4">
 
-                    <h1><span><HiOutlineOfficeBuilding className  = "inline m-2 text-blue-600"/></span>{html_url}</h1>
-                    <h1><span><ImLocation2 className  = "inline m-2 text-blue-600"/></span>{company}</h1>
+                    <h1><span><HiOutlineOfficeBuilding className  = "inline m-2 text-blue-600"/></span>{company}</h1>
+                    <h1><span><ImLocation2 className  = "inline m-2 text-blue-600"/></span>{location}</h1>
                     <h1><span><AiOutlineLink className  = "inline m-2 text-blue-600"/></span>{blog}</h1>
 
                 </div>
@@ -51,4 +51,4 @@ const Card =  ()  => {
     )
 }
 
-export default Card;
+export default Card
